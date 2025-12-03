@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Profesyonel Peyzaj Tasarımı{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid page-header py-5 mb-5" 
+     style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('{% static "img/carousel-2.jpg" %}') center/cover;" alt ="peyzaj tasarımı">
+    <div class="container text-center py-5">
+        <h1 class="display-3 text-white mb-4">Profesyonel Peyzaj Tasarımı</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="/">Ana Sayfa</a></li>
+                <li class="breadcrumb-item"><a href="/services/">Hizmetler</a></li>
+                <li class="breadcrumb-item active">Peyzaj Tasarımı</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row g-5">
+        <div class="col-lg-7">
+            <h2 class="mb-4">Estetik, Fonksiyonel ve Sürdürülebilir Tasarımlar</h2>
+            <p>
+                Villa bahçeleri, site ortak alanları, ticari yapılar, belediye parkları ve özel projeler için 
+                profesyonel peyzaj tasarım hizmeti sunuyoruz. Alan analizi, ihtiyaç belirleme, 3D tasarım ve 
+                uygulama projelerini uzman ekibimizle hazırlıyoruz.
+            </p>
+
+            <h4 class="mt-4 mb-3">Bu Hizmette Neler Yapıyoruz?</h4>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">3D peyzaj tasarım ve proje çizimi</li>
+                <li class="list-group-item">Bitki seçimi ve konumlandırma planlaması</li>
+                <li class="list-group-item">Uygulama projelerinin hazırlanması</li>
+                <li class="list-group-item">Yapısal ve bitkisel peyzaj planı</li>
+                <li class="list-group-item">Profesyonel keşif ve analiz çalışması</li>
+            </ul>
+
+            <a href="/teklif-al/" class="btn btn-primary py-3 px-4">Teklif Al</a>
+        </div>
+
+        <div class="col-lg-5">
+            <img src="{% static 'img/services/peyzaj-tasarim.jpg' %}" class="img-fluid rounded shadow" alt ="peyzaj tasarımı">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

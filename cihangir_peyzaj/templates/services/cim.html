@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Çim Serimi ve Çim Bakımı{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid page-header py-5 mb-5"
+     style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('{% static "img/services/cim-serimi.jpg" %}') center/cover;" alt ="çim serimi ve çim bakımı">
+    <div class="container text-center py-5">
+        <h1 class="display-3 text-white mb-4">Çim Serimi & Çim Bakımı</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="/">Ana Sayfa</a></li>
+                <li class="breadcrumb-item"><a href="/services/">Hizmetler</a></li>
+                <li class="breadcrumb-item active">Çim Serimi</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row g-5">
+        <div class="col-lg-7">
+            <h2 class="mb-4">Yoğun Yeşil ve Sağlıklı Çim Alanlar</h2>
+            <p>
+                Rulo çim uygulaması, profesyonel toprak iyileştirme, havalandırma, gübreleme ve düzenli bakım 
+                hizmetleriyle uzun ömürlü ve estetik çim alanlar oluşturuyoruz.
+            </p>
+
+            <h4 class="mt-4 mb-3">Bu Hizmette Neler Yapıyoruz?</h4>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">Rulo çim serimi</li>
+                <li class="list-group-item">Toprak hazırlığı ve tesviye</li>
+                <li class="list-group-item">Çim biçme ve havalandırma</li>
+                <li class="list-group-item">Gübreleme ve hastalık bakımı</li>
+                <li class="list-group-item">Sezonluk bakım planları</li>
+            </ul>
+
+            <a href="/teklif-al/" class="btn btn-primary py-3 px-4">Teklif Al</a>
+        </div>
+
+        <div class="col-lg-5">
+            <img src="{% static 'img/services/cim-serimi.jpg' %}" class="img-fluid rounded shadow" alt ="çim serimi ve çim bakımı">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

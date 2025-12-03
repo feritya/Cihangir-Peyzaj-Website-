@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ project.title }}{% endblock %}
+{% block content %}
+
+<!-- Header -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+        <h1 class="display-3 text-white animated slideInDown">{{ project.title }}</h1>
+    </div>
+</div>
+
+
+<!-- Project Detail -->
+<div class="container py-5">
+    <div class="row g-5">
+
+        <!-- Left: Main Image -->
+        <div class="col-lg-6">
+            <img src="{{ project.cover_image.url }}" class="img-fluid project-detail-img rounded" alt="">
+        </div>
+
+        <!-- Right: Info -->
+        <div class="col-lg-6">
+            <h2 class="mb-3">{{ project.title }}</h2>
+            <p class="text-primary fw-bold">
+                Durum: 
+                {% if project.status == "completed" %}
+                    Tamamlandı
+                {% else %}
+                    Devam Ediyor
+                {% endif %}
+            </p>
+            <p>{{ project.description|linebreaks }}</p>
+        </div>
+
+
+    </div>
+
+    <!-- Gallery -->
+    {% if project.images.all %}
+    <div class="mt-5">
+        <h3 class="mb-4">Proje Galerisi</h3>
+        <div class="row g-4">
+
+            {% for img in project.images.all %}
+            <div class="col-md-4 col-sm-6">
+                <a href="{{ img.image.url }}" data-lightbox="project">
+                    <img src="{{ img.image.url }}" class="img-fluid project-thumb rounded" alt="">
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+
+{% endblock %}

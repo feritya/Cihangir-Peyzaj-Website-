@@ -1,0 +1,161 @@
+    {% extends "base.html" %}
+    {% block title %}Hakkımızda{% endblock %}
+    {% block content %}
+    {% load static %}
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 
+    d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s"
+        style="background-image: url('{% static "img/carousel-1.jpg" %}'); background-size: cover;" alt ="Hakkımızda Cihangir Peyzaj">
+        <div class="container text-center py-5">
+            <h1 class="display-3 text-white mb-4 animated slideInDown">Hakkımızda</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="/">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Hakkımızda</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-end">
+
+                <!-- Sol Fotoğraf -->
+                <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <img class="img-fluid rounded" src="{% static 'img/about.jpg' %}" 
+                        alt="Peyzaj Mimarı Çalışma Alanı">
+                </div>
+
+                <!-- Metin Alanı -->
+                <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 class="display-1 text-primary mb-0">15</h1>
+                    <p class="text-primary mb-4">Yıllık Tecrübe</p>
+
+                    <h1 class="display-5 mb-4">Sürdürülebilir Peyzaj Tasarımında Yetkin ve Güvenilir Çözümler</h1>
+
+                    <p class="mb-4">
+                        Cihangir Peyzaj olarak, villa bahçelerinden site peyzajlarına,
+                        kurumsal tesislerden kamu projelerine kadar geniş bir alanda profesyonel peyzaj çözümleri üretmekteyiz.
+                        Bitkilendirme, sert zemin uygulamaları, otomatik sulama sistemleri, çim alan düzenlemeleri ve dış
+                        mekan proje yönetimi konularında uzman kadromuzla hizmet veriyoruz.
+                    </p>
+
+                    <a class="btn btn-primary py-3 px-4" href="/projects/">Projelerimizi İnceleyin</a>
+                </div>
+
+                <!-- Sağdaki ikonlu kutular -->
+                <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-5">
+
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="border-start ps-4">
+                                <i class="fa fa-award fa-3x text-primary mb-3"></i>
+                                <h4 class="mb-3">Mükemmel Projeler</h4>
+                                <span>
+                                    Yenilikçi tasarımlarımız ile birçok başarılı peyzaj projesine imza attık.
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="border-start ps-4">
+                                <i class="fa fa-users-cog fa-3x text-primary mb-3"></i>
+                                <h4 class="mb-3">Uzman Ekip</h4>
+                                <span>
+                                    Peyzaj mimarları, botanik uzmanları ve saha ekiplerinden oluşan profesyonel kadro.
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+     <!-- Mission & Vision Start -->
+<div class="container-xxl py-5 bg-light">
+    <div class="container">
+
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="fs-5 fw-bold text-primary">Kurumsal Yapımız</p>
+            <h1 class="display-5 mb-5">Misyonumuz & Vizyonumuz</h1>
+        </div>
+
+        <div class="row g-5">
+
+            <!-- Misyon -->
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.3s">
+                <div class="p-4 bg-white rounded shadow-sm h-100 border-start border-4 border-primary">
+                    <h3 class="text-primary mb-3"><i class="fa fa-leaf me-2"></i>Misyonumuz</h3>
+                    <p style="font-size: 17px;">
+                        Doğayla uyumlu, sürdürülebilir ve estetik peyzaj çözümleri üreterek müşterilerimizin yaşam
+                        alanlarını daha verimli, huzurlu ve estetik hale getirmek.
+                        Her projede kaliteyi, güveni ve profesyonelliği en üst seviyede sunarak uzun vadeli memnuniyet sağlamak.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Vizyon -->
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.5s">
+                <div class="p-4 bg-white rounded shadow-sm h-100 border-start border-4 border-success">
+                    <h3 class="text-success mb-3"><i class="fa fa-seedling me-2"></i>Vizyonumuz</h3>
+                    <p style="font-size: 17px;">
+                        Türkiye'nin önde gelen peyzaj firmalarından biri olarak yenilikçi projeler üretmek,
+                        doğa dostu teknolojileri peyzaj sektörüne entegre etmek ve sektörde kalite standartlarını yükselten
+                        öncü bir marka haline gelmek.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- Mission & Vision End -->
+
+    {% comment %}
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-bold text-primary"> </p>
+                <h1 class="display-5 mb-5"> Kurucumuz </h1>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid" src="{% static 'img/team-1.jpg' %}" alt="">
+                        <div class="team-text">
+                            <h4 class="mb-0">Tuğrul Ali Aksu    </h4>
+                            <p class="text-primary">Peyzaj Mimarı</p>
+                            <div class="team-social d-flex">
+                                <a class="btn btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-square rounded-circle me-2" href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Team End -->
+    {% endcomment %}
+    {% endblock %}

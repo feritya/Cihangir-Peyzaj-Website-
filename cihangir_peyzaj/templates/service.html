@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block title %}Hakkımızda{% endblock %}
+{% block content %}
+
+{% load static %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-3 text-white mb-4 animated slideInDown">Hizmetlerimiz</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#">Ana Sayfa </a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Hizmetlerimiz</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="fs-5 fw-bold text-primary">Hizmetlerimiz</p>
+            <h1 class="display-5 mb-5">Profesyonel Peyzaj Çözümlerimiz</h1>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- 1 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded d-flex h-100">
+                    <div class="service-img rounded">
+                        <img class="img-fluid" src="{% static 'img/services/peyzaj-tasarim.jpg' %}" alt="Peyzaj Tasarımı">
+                    </div>
+                    <div class="service-text rounded p-5">
+                        <h4 class="mb-3">Profesyonel Peyzaj Tasarımı</h4>
+                        <p class="mb-4">Villa, site ve ticari alanlar için modern, sürdürülebilir ve estetik peyzaj tasarımları hazırlıyoruz.</p>
+                    <a class="btn btn-sm" href="{% url "peyzaj_tasarim" %}"><i class="fa fa-plus text-primary me-2"></i> İncele</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded d-flex h-100">
+                    <div class="service-img rounded">
+                        <img class="img-fluid" src="{% static 'img/services/sulama.jpg' %}" alt="Otomatik Sulama">
+                    </div>
+                    <div class="service-text rounded p-5">
+                        <h4 class="mb-3">Otomatik Sulama Sistemleri</h4>
+                        <p class="mb-4">Yeşil alanlarınız için su tasarruflu, tam otomatik sulama sistemi planlama ve uygulama hizmeti sunuyoruz.</p>
+                        <a class="btn btn-sm" href="/services/sulama/"><i class="fa fa-plus text-primary me-2"></i> İncele</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded d-flex h-100">
+                    <div class="service-img rounded">
+                        <img class="img-fluid" src="{% static 'img/services/cim-serimi.jpg' %}" alt="Çim Serimi">
+                    </div>
+                    <div class="service-text rounded p-5">
+                        <h4 class="mb-3">Çim Serimi & Çim Bakımı</h4>
+                        <p class="mb-4">Rulo çim uygulaması, çim havalandırma, gübreleme ve tüm bakım hizmetlerini profesyonel şekilde sağlıyoruz.</p>
+                        <a class="btn btn-sm" href="/services/cim-serimi/"><i class="fa fa-plus text-primary me-2"></i> İncele</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded d-flex h-100">
+                    <div class="service-img rounded">
+                        <img class="img-fluid" src="{% static 'img/services/bitkilendirme.jpg' %}" alt="Bitkilendirme">
+                    </div>
+                    <div class="service-text rounded p-5">
+                        <h4 class="mb-3">Bitkilendirme & Ağaçlandırma</h4>
+                        <p class="mb-4">Bölge iklimine uygun bitki seçimi, ağaçlandırma, çalı grupları ve renk uyumu planlaması yapıyoruz.</p>
+                        <a class="btn btn-sm" href="/services/bitkilendirme/"><i class="fa fa-plus text-primary me-2"></i> İncele</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded d-flex h-100">
+                    <div class="service-img rounded">
+                        <img class="img-fluid" src="{% static 'img/services/sert-zemin.jpg' %}" alt="Sert Zemin">
+                    </div>
+                    <div class="service-text rounded p-5">
+                        <h4 class="mb-3">Sert Zemin & Yapısal Peyzaj</h4>
+                        <p class="mb-4">Pergola, kamelya, yürüyüş yolları, peyzaj duvarı ve dekoratif taş uygulamalarını anahtar teslim gerçekleştiriyoruz.</p>
+                        <a class="btn btn-sm" href="/services/sert-zemin/"><i class="fa fa-plus text-primary me-2"></i> İncele</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded d-flex h-100">
+                    <div class="service-img rounded">
+                        <img class="img-fluid" src="{% static 'img/services/bakim.jpg' %}" alt="Bakım Hizmetleri">
+                    </div>
+                    <div class="service-text rounded p-5">
+                        <h4 class="mb-3">Villa – Site Peyzaj Bakımı</h4>
+                        <p class="mb-4">Aylık, sezonluk veya yıllık profesyonel peyzaj bakım sözleşmeleriyle yeşil alanlarınızı koruyoruz.</p>
+                        <a class="btn btn-sm" href="/services/villa-bakim/"><i class="fa fa-plus text-primary me-2"></i> İncele</a>
+                    </div>
+                </div>
+            </div>  
+
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const isMobile = window.innerWidth < 992;
+
+    if (isMobile) {
+        const items = document.querySelectorAll(".portfolio-item .portfolio-inner");
+        items.forEach(item => {
+            item.classList.add("active");
+        });
+    }
+});
+</script>
+
+{% endblock %}

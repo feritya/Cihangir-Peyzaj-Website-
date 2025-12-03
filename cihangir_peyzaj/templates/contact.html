@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}İletişim{% endblock %}
+
+{% block content %}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+        <h1 class="display-3 text-white mb-4 animated slideInDown">İletişim</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="/">Ana Sayfa</a></li>
+                <li class="breadcrumb-item active" aria-current="page">İletişim</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Contact Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+
+        <!-- Django Messages -->
+        {% if messages %}
+        <div class="mb-4">
+            {% for msg in messages %}
+                <div class="alert alert-{{ msg.tags }} alert-dismissible fade show" role="alert">
+                    {{ msg }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="row g-5">
+
+            <!-- Contact Form -->
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <p class="fs-5 fw-bold text-primary">Bize Ulaşın</p>
+                <h1 class="display-5 mb-4">Her türlü sorunuz için bize yazabilirsiniz</h1>
+
+                <form method="POST">
+                    <style>
+                    .hiddenbot {
+                        display:none !important;
+                        visibility:hidden !important;
+                        height:0 !important;
+                        width:0 !important;
+                        padding:0 !important;
+                        margin:0 !important;
+                        opacity:0 !important;
+                        position:absolute !important;
+                        left:-9999px !important;
+                    }
+                    </style>
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <!-- Honeypot -->
+                        <input type="text" name="website" class="hiddenbot">
+
+                        <!-- Anti-bot timestamp -->
+                        <input type="hidden" name="timestamp" value="{{ timestamp }}">
+
+                        <!-- Ad Soyad -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+
+                                {{ form.name }}
+
+                                <label for="id_name">Ad Soyad</label>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form.email }}
+                                <label for="id_email">Email</label>
+                            </div>
+                        </div>
+
+                        <!-- Konu -->
+                        <div class="col-12">
+                            <div class="form-floating">
+                                {{ form.subject }}
+                                <label for="id_subject">Konu</label>
+                            </div>
+                        </div>
+
+                        <!-- Mesaj -->
+                        <div class="col-12">
+                            <div class="form-floating">
+                                {{ form.message }}
+                                <label for="id_message">Mesajınız</label>
+                            </div>
+                        </div>
+
+                        <!-- Buton -->
+                        <div class="col-12">
+                            <button class="btn btn-primary py-3 px-4" type="submit">
+                                Mesajı Gönder
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            <!-- Contact Details + Map -->
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+
+                <div class="bg-light border rounded p-4 mb-4 w-100">
+                    <h5><i class="fa fa-map-marker-alt text-primary me-2"></i>Adres</h5>
+                    <p class="mb-0">{{ settings.address }}</p>
+                </div>
+
+                <div class="bg-light border rounded p-4 mb-4 w-100">
+                    <h5><i class="fa fa-phone-alt text-primary me-2"></i>Telefon</h5>
+                    <p class="mb-0">{{ settings.phone }}</p>
+                </div>
+
+                <div class="bg-light border rounded p-4 mb-4 w-100">
+                    <h5><i class="fa fa-envelope text-primary me-2"></i>Email</h5>
+                    <p class="mb-0">{{ settings.email }}</p>
+                </div>
+
+                <!-- Map -->
+                <div class="rounded overflow-hidden w-100" style="height: 400px;">
+                    {{ settings.map_iframe|safe }}
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+{% endblock %}

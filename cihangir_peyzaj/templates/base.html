@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Cihangir Peyzaj – Profesyonel peyzaj tasarımı, sulama sistemleri, çim uygulamaları ve bakım hizmetleri.">
+    <meta name="keywords" content="peyzaj, peyzaj tasarım, sulama sistemi, çim serimi, peyzaj mimarlığı, bahçe düzenleme">
+    <meta name="author" content="Cihangir Peyzaj">
+    <meta property="og:title" content="Cihangir Peyzaj - Profesyonel Peyzaj Hizmetleri">
+    <meta property="og:description" content="Villa, site ve ticari alanlar için modern peyzaj çözümleri.">
+    <meta property="og:image" content="{% static 'img/logo.png' %}">
+    <meta property="og:url" content="https://cihangirpeyzaj.com">
+    <meta property="og:type" content="website">
+
+    <title>{% block title %}Peyzaj{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icon Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    
+  <style>
+  /* Floating Buttons */
+  .floating-buttons {
+    position: fixed;
+    bottom: 25%; /* ekranın 1/4 yukarısında */
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+  }
+
+  .floating-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.3s ease;
+    background-color: #333; /* fallback */
+  }
+
+  .floating-btn img {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+
+  .floating-btn span {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .floating-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  }
+
+  /* WhatsApp Buton Rengi */
+  .floating-btn.whatsapp {
+    background: #25D366;
+    color: #fff;
+  }
+
+  /* PEYZAJ TEKLİF Buton Rengi */
+  .floating-btn.kentsel {
+    background: #ffffffff;
+    color: #07b40dff;
+  }
+  /* Telefon Buton Rengi */
+  .floating-btn.telefon {
+    background: #007bff;
+    color: #000000ff;
+  } 
+
+  /* Mobilde ikon boyutu ve yazı küçültme */
+  @media (max-width: 576px) {
+    .floating-btn img { width: 24px; height: 24px; }
+    .floating-btn span { font-size: 14px; }
+    .floating-buttons { gap: 8px; right: 15px; bottom: 20%; }
+  }
+  </style>
+
+    <style>
+    .portfolio-inner .portfolio-text {
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .portfolio-inner:hover .portfolio-text {
+        opacity: 1;
+    }
+
+    /* Mobilde aktif olunca otomatik açık */
+    .portfolio-inner.active .portfolio-text {
+        opacity: 1 !important;
+    }
+
+    </style>
+
+</head>
+
+<body class="{% block bodyclass %}{% endblock %}">
+
+    {% include "partials/navbar.html" %}
+
+  <main class="main">
+    {% block content %}{% endblock %}
+  </main>
+
+    {% include "partials/footer.html" %}
+    
+  <!-- Floating Buttons -->
+    <div class="floating-buttons">
+    <!-- Proje Teklifif Al -->
+    <a href="{% url 'offer' %}" class="floating-btn kentsel">
+        <img src="{% static 'img/ikon.jpg' %}" alt="Peyzaj Tasarım Cihangir Peyzaj">
+        <span>Peyzaj Teklifi Al</span>
+    </a>
+
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/905365416404" target="_blank" class="floating-btn whatsapp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <span>WhatsApp</span>
+    </a>
+
+
+        <!-- Telefon -->
+    <a href="tel:+905365416404" class="floating-btn telefon">
+        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Telefon">
+        <span>Hemen Ara </span>    
+    </a>  
+
+    </div>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXX');
+    </script>
+
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/parallax/parallax.min.js' %}"></script>
+    <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+
+{% extends "base.html" %}
+{% block title %}Anasayfa{% endblock %}
+{% block content %}
+{% load static %}
+
+<!-- Carousel Start -->
+<div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <!-- Slider 1 -->
+            <div class="carousel-item active">
+                <img class="w-100" src="{% static 'img/carousel-1.jpg' %}" alt="Peyzaj Tasarım ve Uygulama">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h1 class="display-1 text-white mb-5 animated slideInDown">
+                                    Profesyonel Peyzaj Tasarım ve Uygulama Çözümleri
+                                </h1>
+                                <a href="/services/" class="btn btn-primary py-sm-3 px-sm-4">
+                                    Hizmetlerimizi Keşfedin
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider 2 -->
+            <div class="carousel-item">
+                <img class="w-100" src="{% static 'img/carousel-2.jpg' %}" alt="Modern Peyzaj Projeleri">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <h1 class="display-1 text-white mb-5 animated slideInDown">
+                                    Villa, Site ve Kurumsal Alanlarda Anahtar Teslim Peyzaj Hizmetleri
+                                </h1>
+                                <a href="/iletisim/" class="btn btn-primary py-sm-3 px-sm-4">
+                                    Ücretsiz Keşif Talep Edin
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Önceki</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Sonraki</span>
+        </button>
+    </div>
+</div>
+<!-- Carousel End -->
+
+
+<!-- Top Feature Start -->
+<div class="container-fluid top-feature py-5 pt-lg-0">
+    <div class="container py-5 pt-lg-0">
+        <div class="row gx-0">
+
+            <!-- Özellik 1 -->
+            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                            <i class="fa fa-file-invoice-dollar text-primary"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h4>Şeffaf Fiyatlandırma</h4>
+                            <span>Proje keşfi sonrası net, anlaşılır ve sürprizsiz fiyat politikası.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Özellik 2 -->
+            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                            <i class="fa fa-users-cog text-primary"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h4>Uzman Peyzaj Ekibi</h4>
+                            <span>Peyzaj mimarları, teknik ekip ve saha uzmanlarından oluşan profesyonel kadro.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Özellik 3 -->
+            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                            <i class="fa fa-headset text-primary"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h4>7/24 Müşteri Desteği</h4>
+                            <span>Her zaman ulaşabileceğiniz profesyonel destek hattı.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Top Feature End -->
+
+
+
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-end">
+
+            <!-- Görsel -->
+            <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+                <img class="img-fluid rounded" src="{% static 'img/about.jpg' %}" alt="Peyzaj Mimarı Çalışma Alanı">
+            </div>
+
+            <!-- Metin Alanı -->
+            <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
+                <h1 class="display-1 text-primary mb-0">15</h1>
+                <p class="text-primary mb-4">Yıllık Deneyim</p>
+
+                <h1 class="display-5 mb-4">Peyzaj Tasarımında Yenilikçi ve Sürdürülebilir Çözümler</h1>
+
+                <p class="mb-4">
+                    Firmamız, 15 yılı aşkın süredir peyzaj mimarisi, çevre düzenleme, bitkilendirme,
+                    otomatik sulama sistemleri ve anahtar teslim dış mekan projelerinde profesyonel hizmet sunmaktadır.
+                    Villa bahçelerinden site peyzajlarına, kurumsal kampüslerden kamu alanlarına kadar birçok
+                    alanda sürdürülebilir, estetik ve fonksiyonel peyzaj çözümleri üretiyoruz.
+                </p>
+
+                <a class="btn btn-primary py-3 px-4" href="/about/">
+                    Daha Fazlasını Keşfedin
+                </a>
+            </div>
+
+            <!-- Sağdaki kutular -->
+            <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="row g-5">
+
+                    <!-- Ödüller -->
+                    <div class="col-12 col-sm-6 col-lg-12">
+                        <div class="border-start ps-4">
+                            <i class="fa fa-award fa-3x text-primary mb-3"></i>
+                            <h4 class="mb-3">Ödüllü Projeler</h4>
+                            <span>
+                                Fark yaratan peyzaj tasarımlarımızla ulusal ve sektörel birçok başarıya imza attık.
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Uzman ekip -->
+                    <div class="col-12 col-sm-6 col-lg-12">
+                        <div class="border-start ps-4">
+                            <i class="fa fa-users-cog fa-3x text-primary mb-3"></i>
+                            <h4 class="mb-3">Uzman Ekip</h4>
+                            <span>
+                                Peyzaj mimarları, teknik personel ve saha ekiplerinden oluşan profesyonel kadromuzla
+                                her ölçekten projeyi titizlikle yürütüyoruz.
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- Features Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <p class="fs-5 fw-bold text-success">Neden Bizi Tercih Etmelisiniz?</p>
+                <h1 class="display-5 mb-4">Dış Mekânlarınızı Profesyonelce Tasarlıyoruz</h1>
+                <p class="mb-4">Yaratıcı, sürdürülebilir ve fonksiyonel çözümler sunarak evler, ofisler ve kamusal alanlar için güzel ve kullanışlı dış mekânlar tasarlıyoruz. Her projemizde kalite ve müşteri memnuniyeti önceliğimizdir.</p>
+                <a class="btn btn-success py-3 px-4" href="/services/">Daha Fazla Keşfet</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                                    <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                        <i class="fa fa-leaf fa-3x text-success"></i>
+                                    </div>
+                                    <h4 class="mb-0">Çevre Dostu Tasarımlar</h4>
+                                </div>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                                    <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                        <i class="fa fa-users fa-3x text-success"></i>
+                                    </div>
+                                    <h4 class="mb-0">Deneyimli Ekip</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                        <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                <i class="fa fa-tree fa-3x text-success"></i>
+                            </div>
+                            <h4 class="mb-0">Modern Peyzaj Ekipmanları</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="fs-5 fw-bold text-primary">Başlıca Hizmetlerimiz</p>
+            <h1 class="display-5 mb-5">Sizin İçin Neler Yapıyoruz?</h1>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- 1 - Peyzaj Tasarımı -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded d-flex h-100">
+                    <div class="service-img rounded">
+                        <img class="img-fluid" src="{% static 'img/services/peyzaj-tasarim.jpg' %}" alt="Peyzaj Tasarımı">
+                    </div>
+                    <div class="service-text rounded p-5">
+                        <h4 class="mb-3">Profesyonel Peyzaj Tasarımı</h4>
+                        <p class="mb-4">Villa, site ve ticari alanlar için modern ve estetik peyzaj tasarımları.</p>
+                        <a class="btn btn-sm" href="{% url 'peyzaj_tasarim' %}">
+                            <i class="fa fa-plus text-primary me-2"></i>Detaylı İncele
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 - Sulama -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded d-flex h-100">
+                    <div class="service-img rounded">
+                        <img class="img-fluid" src="{% static 'img/services/sulama.jpg' %}" alt="Otomatik Sulama">
+                    </div>
+                    <div class="service-text rounded p-5">
+                        <h4 class="mb-3">Otomatik Sulama Sistemleri</h4>
+                        <p class="mb-4">Su tasarruflu, tam otomatik sulama sistemi planlama ve uygulama.</p>
+                        <a class="btn btn-sm" href="/services/sulama/">
+                            <i class="fa fa-plus text-primary me-2"></i>Detaylı İncele
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 - Çim Serimi -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded d-flex h-100">
+                    <div class="service-img rounded">
+                        <img class="img-fluid" src="{% static 'img/services/cim-serimi.jpg' %}" alt="Çim Serimi">
+                    </div>
+                    <div class="service-text rounded p-5">
+                        <h4 class="mb-3">Çim Serimi & Bakımı</h4>
+                        <p class="mb-4">Rulo çim uygulaması, havalandırma, gübreleme ve profesyonel çim bakımı.</p>
+                        <a class="btn btn-sm" href="/services/cim-serimi/">
+                            <i class="fa fa-plus text-primary me-2"></i>Detaylı İncele
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 - Bitkilendirme -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded d-flex h-100">
+                    <div class="service-img rounded">
+                        <img class="img-fluid" src="{% static 'img/services/bitkilendirme.jpg' %}" alt="Bitkilendirme">
+                    </div>
+                    <div class="service-text rounded p-5">
+                        <h4 class="mb-3">Bitkilendirme & Ağaçlandırma</h4>
+                        <p class="mb-4">İklime uygun bitki seçimi, ağaçlandırma ve renk uyumu planlaması.</p>
+                        <a class="btn btn-sm" href="/services/bitkilendirme/">
+                            <i class="fa fa-plus text-primary me-2"></i>Detaylı İncele
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 - Sert Zemin -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded d-flex h-100">
+                    <div class="service-img rounded">
+                        <img class="img-fluid" src="{% static 'img/services/sert-zemin.jpg' %}" alt="Sert Zemin">
+                    </div>
+                    <div class="service-text rounded p-5">
+                        <h4 class="mb-3">Sert Zemin & Yapısal Peyzaj</h4>
+                        <p class="mb-4">Pergola, yürüyüş yolları, peyzaj duvarı, dekoratif taş uygulamaları.</p>
+                        <a class="btn btn-sm" href="/services/sert-zemin/">
+                            <i class="fa fa-plus text-primary me-2"></i>Detaylı İncele
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 - Villa Bakımı -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded d-flex h-100">
+                    <div class="service-img rounded">
+                        <img class="img-fluid" src="{% static 'img/services/bakim.jpg' %}" alt="Bahçe Bakımı">
+                    </div>
+                    <div class="service-text rounded p-5">
+                        <h4 class="mb-3">Profesyonel Bahçe Bakımı</h4>
+                        <p class="mb-4">Aylık veya sezonluk profesyonel villa ve site peyzaj bakım hizmetleri.</p>
+                        <a class="btn btn-sm" href="/services/villa-bakim/">
+                            <i class="fa fa-plus text-primary me-2"></i>Detaylı İncele
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+<!-- Projects Start -->
+ <div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="fs-5 fw-bold text-primary">Başlıca Projelerimiz</p>
+            <h1 class="display-5 mb-5"></h1>
+        </div>
+
+        <div class="row g-4">
+
+            {% for project in featured_projects %}
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.{{ forloop.counter }}s">
+                <div class="portfolio-inner rounded" style="overflow: hidden;">
+                    <img class="img-fluid" 
+                         src="{{ project.cover_image.url }}" 
+                         alt="{{ project.title }}"
+                         style="width: 100%; height: 260px; object-fit: cover;">
+                    
+                    <div class="portfolio-text">
+                        <h4 class="text-white mb-4">{{ project.title }}</h4>
+                        <div class="d-flex">
+                            <a class="btn btn-lg-square rounded-circle mx-2" 
+                               href="{{ project.image.url }}" 
+                               data-lightbox="portfolio">
+                               <i class="fa fa-eye"></i></a>
+
+                            <a class="btn btn-lg-square rounded-circle mx-2" 
+                               href="{% url 'project_detail' project.pk %}">
+                               <i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p class="text-center">Henüz proje eklenmedi.</p>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+
+
+     {% endblock %}

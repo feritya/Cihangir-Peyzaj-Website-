@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Otomatik Sulama Sistemleri{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid page-header py-5 mb-5"
+     style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('{% static "img/services/sulama.jpg" %}') center/cover;">
+    <div class="container text-center py-5">
+        <h1 class="display-3 text-white mb-4">Otomatik Sulama Sistemleri</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="/">Ana Sayfa</a></li>
+                <li class="breadcrumb-item"><a href="/services/">Hizmetler</a></li> 
+                <li class="breadcrumb-item active">Otomatik Sulama</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row g-5">
+        <div class="col-lg-7">
+            <h2 class="mb-4">Verimli ve Tam Otomatik Sulama Sistemleri</h2>
+            <p>
+                Yeşil alanlarınızın sağlıklı kalması için profesyonel sulama planlaması şarttır. 
+                Zaman ayarlı, sensör kontrollü, su tasarruflu otomatik sulama sistemlerini projelendirip uyguluyoruz.
+            </p>
+
+            <h4 class="mt-4 mb-3">Bu Hizmette Neler Yapıyoruz?</h4>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">Profesyonel sulama keşif ve proje planlaması</li>
+                <li class="list-group-item">Yağmurlama, damlama ve rotor sistemleri</li>
+                <li class="list-group-item">Zamanlayıcı ve sensörlü otomasyon kurulumu</li>
+                <li class="list-group-item">Su tasarrufu sağlayan akıllı çözümler</li>
+                <li class="list-group-item">Villa, site ve ticari alan uygulamaları</li>
+            </ul>
+
+            <a href="/teklif-al/" class="btn btn-primary py-3 px-4">Teklif Al</a>
+        </div>
+
+        <div class="col-lg-5">
+            <img src="{% static 'img/services/sulama.jpg' %}" class="img-fluid rounded shadow" alt="otomatik sulama sistemleri">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

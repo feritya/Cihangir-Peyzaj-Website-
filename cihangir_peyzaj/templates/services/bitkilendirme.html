@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Bitkilendirme ve Ağaçlandırma{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid page-header py-5 mb-5"
+     style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('{% static "img/services/bitkilendirme.jpg" %}') center/cover;" alt="bitkilendirme ve ağaçlandırma">
+    <div class="container text-center py-5">
+        <h1 class="display-3 text-white mb-4">Bitkilendirme & Ağaçlandırma</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="/">Ana Sayfa</a></li>
+                <li class="breadcrumb-item"><a href="/services/">Hizmetler</a></li>
+                <li class="breadcrumb-item active">Bitkilendirme</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row g-5">
+        <div class="col-lg-7">
+            <h2 class="mb-4">Doğru Bitki, Doğru Alan, Doğru Planlama</h2>
+            <p>
+                Bölgenin iklim koşullarına uygun, sağlıklı gelişim gösteren, estetik açıdan güçlü bitkilerle 
+                profesyonel bitkilendirme ve ağaçlandırma hizmeti sunuyoruz.
+            </p>
+
+            <h4 class="mt-4 mb-3">Bu Hizmette Neler Yapıyoruz?</h4>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">İklime uygun bitki seçimi</li>
+                <li class="list-group-item">Ağaç, çalı ve çok yıllık bitki dikimi</li>
+                <li class="list-group-item">Renk ve mevsim uyumu planlaması</li>
+                <li class="list-group-item">Bitki sağlığı analizi</li>
+                <li class="list-group-item">Sulama ve bakım planı</li>
+            </ul>
+
+            <a href="/teklif-al/" class="btn btn-primary py-3 px-4">Teklif Al</a>
+        </div>
+
+        <div class="col-lg-5">
+            <img src="{% static 'img/services/bitkilendirme.jpg' %}" class="img-fluid rounded shadow" alt="bitkilendirme ve ağaçlandırma">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

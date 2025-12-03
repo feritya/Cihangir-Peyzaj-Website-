@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Peyzaj Bakım Hizmetleri{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid page-header py-5 mb-5"
+     style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('{% static "img/services/bakim.jpg" %}') center/cover;">
+    <div class="container text-center py-5">
+        <h1 class="display-3 text-white mb-4">Peyzaj Bakım Hizmetleri</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="/">Ana Sayfa</a></li>
+                <li class="breadcrumb-item"><a href="/services/">Hizmetler</a></li>
+                <li class="breadcrumb-item active">Peyzaj Bakımı</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row g-5">
+        <div class="col-lg-7">
+            <h2 class="mb-4">Düzenli ve Profesyonel Peyzaj Bakımı</h2>
+            <p>
+                Villa bahçeleri, siteler, oteller, iş merkezleri ve ticari alanlar için aylık veya yıllık 
+                profesyonel peyzaj bakım hizmetleri sunuyoruz. Yeşil alanlarınız her zaman düzenli ve sağlıklı kalsın.
+            </p>
+
+            <h4 class="mt-4 mb-3">Bu Hizmette Neler Yapıyoruz?</h4>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">Düzenli çim biçme ve kenar düzeltme</li>
+                <li class="list-group-item">Bitki ve ağaç budama</li>
+                <li class="list-group-item">Yabani ot kontrolü</li>
+                <li class="list-group-item">Gübreleme ve bitki sağlığı bakımı</li>
+                <li class="list-group-item">Sulama sistemi kontrolü</li>
+            </ul>
+
+            <a href="/teklif-al/" class="btn btn-primary py-3 px-4">Teklif Al</a>
+        </div>
+
+        <div class="col-lg-5">
+            <img src="{% static 'img/services/bakim.jpg' %}" class="img-fluid rounded shadow" alt="peyzaj bakım hizmetleri">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

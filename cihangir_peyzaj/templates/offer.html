@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Teklif Al{% endblock %}
+{% block content %}
+
+<style>
+.offer-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("{% static 'img/offer.png' %}") center/cover no-repeat;
+    padding: 120px 0;
+    color: white;
+}
+.offer-box {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,.1);
+}
+.offer-box h3 {
+    font-weight: 600;
+}
+</style>
+
+<!-- HERO -->
+<div class="offer-hero text-center">
+    <h1 class="display-3 fw-bold" style="    color: #FFFFFF;">Peyzaj Hizmetleri İçin Teklif Alın</h1>
+    <p class="lead mt-3">Villa, site veya ticari alanlar için özel peyzaj teklifinizi 24 saat içinde hazırlıyoruz.</p>
+</div>
+
+<!-- FORM ALANI -->
+<div class="container py-5">
+    <div class="row g-5">
+
+        <!-- FORM -->
+        <div class="col-lg-7">
+            <div class="offer-box">
+                <h3 class="mb-4">Teklif Formu</h3>
+
+                <form method="POST">
+                    <style>
+                    .hiddenbot {
+                        display:none !important;
+                        visibility:hidden !important;
+                        height:0 !important;
+                        width:0 !important;
+                        padding:0 !important;
+                        margin:0 !important;
+                        opacity:0 !important;
+                        position:absolute !important;
+                        left:-9999px !important;
+                    }
+                    </style>
+
+                    {% csrf_token %}
+
+                    <div class="row g-3">
+                        <input type="text" name="website" class="hiddenbot">
+
+                            <!-- Anti-bot timestamp -->
+                        <input type="hidden" name="timestamp" value="{{ timestamp }}">
+
+                        <div class="col-md-6">
+                            <label class="form-label">Ad Soyad</label>
+                            <input type="text" name="name" class="form-control" placeholder="Adınız Soyadınız" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Telefon</label>
+                            <input type="text" name="phone" class="form-control" placeholder="Telefon Numaranız" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label class="form-label">E-posta Adresi</label>
+                            <input type="email" name="email" class="form-control" placeholder="E-posta adresiniz" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label class="form-label">Hizmet Türü</label>
+                            <select name="service_type" class="form-control" required>
+                                <option value="">Birini seçin...</option>
+                                <option>Villa / Site Peyzajı</option>
+                                <option>Otomatik Sulama & Drenaj</option>
+                                <option>Ağaç Ve Çalıların Dikimii</option>
+                                <option>Çim Serim</option>
+                                <option>Sert Zemin & Yapısal Peyzaj</option>
+                                <option>Peyzaj Tasarım Projelendirmesi & 3D </option>
+                                <option>Toprak Dolgusu</option>
+                                <option>Diğer</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Proje Açıklaması</label>
+                            <textarea name="message" class="form-control" rows="4" placeholder="Proje detaylarını yazın... Örneğin 250 m^2 bahçem var toprak dolgusu, otomatik sulama, çim ve drenajı yaptırmak istiyorum." required></textarea>
+                        </div>
+
+                        <div class="col-12 text-end">
+                            <button type="submit" class="btn btn-primary py-3 px-5">Teklif Al</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <!-- BİLGİ KUTULARI -->
+        <div class="col-lg-5">
+            <div class="offer-box mb-4">
+                <h4><i class="fa fa-check-circle text-success me-2"></i>Neden Biz?</h4>
+                <p class="mt-2">
+                    15+ yıllık deneyim, profesyonel peyzaj ekibi ve sürdürülebilir tasarımlar.
+                </p>
+            </div>
+
+            <div class="offer-box mb-4">
+                <h4><i class="fa fa-clock text-primary me-2"></i>24 Saat İçinde Dönüş</h4>
+                <p class="mt-2">
+                    Talebiniz ekibimize düşer düşmez size özel teklif hazırlanır.
+                </p>
+            </div>
+
+            <div class="offer-box">
+                <h4><i class="fa fa-phone text-warning me-2"></i>7/24 İletişim</h4>
+                <p class="mt-2">
+                    Soru ve talepleriniz için istediğiniz an bize ulaşabilirsiniz.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

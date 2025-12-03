@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Sert Zemin & Yapısal Peyzaj{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid page-header py-5 mb-5"
+     style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('{% static "img/services/sert-zemin.jpg" %}') center/cover;" alt"sert zemin ve yapısal peyzaj">
+    <div class="container text-center py-5">
+        <h1 class="display-3 text-white mb-4">Sert Zemin & Yapısal Peyzaj</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="/">Ana Sayfa</a></li>
+                <li class="breadcrumb-item"><a href="/services/">Hizmetler</a></li>
+                <li class="breadcrumb-item active">Sert Zemin</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row g-5">
+        <div class="col-lg-7">
+            <h2 class="mb-4">Estetik ve Dayanıklı Yapısal Çözümler</h2>
+            <p>
+                Peyzaj projeleriniz için dayanıklı, uzun ömürlü ve dekoratif sert zemin uygulamaları 
+                tasarlayıp uyguluyoruz. Estetik ve fonksiyonellik ilkelerini bir araya getiriyoruz.
+            </p>
+
+            <h4 class="mt-4 mb-3">Bu Hizmette Neler Yapıyoruz?</h4>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">Doğal taş ve parke uygulamaları</li>
+                <li class="list-group-item">Yürüyüş yolları ve bahçe yolları</li>
+                <li class="list-group-item">Duvar, bordür, merdiven uygulamaları</li>
+                <li class="list-group-item">Kamelya ve pergola yapımı</li>
+                <li class="list-group-item">Dekoratif peyzaj öğeleri</li>
+            </ul>
+
+            <a href="/teklif-al/" class="btn btn-primary py-3 px-4">Teklif Al</a>
+        </div>
+
+        <div class="col-lg-5">
+            <img src="{% static 'img/services/sert-zemin.jpg' %}" class="img-fluid rounded shadow" alt"sert zemin ve yapısal peyzaj">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

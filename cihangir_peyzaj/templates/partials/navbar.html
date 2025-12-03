@@ -1,0 +1,53 @@
+{% load static %}
+
+<!-- Topbar Start -->
+<div class="container-fluid bg-dark text-light px-0 py-2">
+    <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center me-4">
+                <span class="fa fa-phone-alt me-2"></span>
+                <span>{{ global_settings.phone }} </span>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center">
+                <span class="far fa-envelope me-2"></span>
+                <span>{{ global_settings.email }} </span>
+            </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+            <div class="h-100 d-inline-flex align-items-center mx-n2">
+                <span>Bizi Takip Edin:</span>
+                <a class="btn btn-link text-light" href="tel:+905365416404"><i class="fa fa-phone"></i></a>
+                <a href="https://wa.me/905365416404" target="_blank"><i class='fab fa-whatsapp' style='font-size:20px;color:#fff'></i></a>
+                <a class="btn btn-link text-light" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <img src="{% static 'img/favicon-logo.jpg' %}" alt="Cihangir Peyzaj Logo " class="me-2" style="height:40px;">
+        <h1 class="m-0">CİHANGİR PEYZAJ </h1>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="{% url 'home' %}" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Ana Sayfa</a>
+            <a href="{% url 'about' %}" class="nav-item nav-link {% if request.path == '/hakkimizda/' %}active{% endif %}">Hakkımızda</a>
+            <a href="{% url 'services' %}" class="nav-item nav-link {% if request.path == '/hizmetler/' %}active{% endif %}">Hizmetler</a>
+            <a href="{% url 'projects' %}" class="nav-item nav-link {% if request.path == '/projeler/' %}active{% endif %}">Projeler</a>
+
+
+
+            <a href="{% url 'contact' %}" class="nav-item nav-link {% if request.path == '/iletisim/' %}active{% endif %}">İletişim</a>
+        </div>
+        <a href="{% url 'offer' %}" class="btn btn-success py-4 px-lg-4 rounded-0 d-none d-lg-block">
+            Teklif Al <i class="fa fa-arrow-right ms-3"></i>
+        </a>
+    </div>
+</nav>
+<!-- Navbar End -->
