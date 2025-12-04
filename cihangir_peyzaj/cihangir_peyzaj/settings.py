@@ -24,16 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 
-# SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-key")
 # DEBUG = os.getenv("DEBUG", "True") == "True"
 # ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 
 # # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-_&wlg7c^)0*-nl*(ufo*j=v@hkmapzy#1oqg2wfcg)lq3-bh+b'
+SECRET_KEY = os.environ.get("SECRET_KEY", "local-dev-key-degis") 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['cihangirpeyzaj.com', 'www.cihangirpeyzaj.com','127.0.0.1']
 
@@ -55,7 +54,7 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "yasarferit13@gmail.com"
-EMAIL_HOST_PASSWORD = "ltbvviqcqgqroicy"   # normal şifre değil!
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 MIDDLEWARE = [
@@ -98,8 +97,12 @@ WSGI_APPLICATION = 'cihangir_peyzaj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cihangirdb',            # CREATE DATABASE cihangirdb;
+        'USER': 'cihangiruser',          # CREATE USER cihangiruser
+        'PASSWORD': os.environ.get("POSTGRES_PASSWORD", "devpassword"),
+        'HOST': 'localhost',             # Varsayılan localhost
+        'PORT': '5432',                  # PostgreSQL varsayılan portu
     }
 }
 
@@ -152,3 +155,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SECURE_BROWSER_XSS_FILTER = True
+X_FRAME_OPTIONS = 'DENY'
+CSRF_COOKIE_SECURE = True   # HTTPS canlıda True olmalı
+SESSION_COOKIE_SECURE = True
